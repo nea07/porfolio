@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #090221;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    position: relative;
+    width:300px;
+    height:400px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.img{
+    background: rgb(53, 53, 53);
+    position: absolute;
+    width:100%;
+    height:100%;
+    transition: .2s;
+/* background: url("photo_2022-10-28_12-40-23.jpg") 0 10% / cover; */
+}
+.content{
+    position: absolute;
+    bottom: 0;
+    width:100%;
+    height:150px;
+    font-family: 'poppins',sans-serif;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transition: .5s;
+    justify-content: space-evenly;
+}
+.name{
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: flex;
+}
+#role{
+    font-size: .9rem;
+    color: #4b4b4b;
+}
+span{
+    display: block;
+    margin: 0 .2rem;
+    transition: .2s ease;
+}
+span:nth-child(1){
+    transform:translateX(-180px);
+}
+span:nth-child(2){
+    transform:translateX(180px);
+}
+.links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:60px;
+}
+.links a{
+    padding: .6rem  .9rem;
+    color: #fff;
+    margin: .4rem;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    transition: .3s ease;
+    transform: translateY(150px);
+}
+.links a:nth-child(1){
+    background-color:burlywood;
+    transition-delay: 0.1s;
+}
+.links a:nth-child(2){
+    background-color:seagreen;
+    transition-delay: 0.2s;
+}
+.links a:nth-child(3){
+    transition-delay: 0.3s;
+    background-color: darkred;
+}
+
+/*------*/
+.card:hover .img{
+    transform: scale(1.1);
+}
+.card:hover .content{
+    opacity: 1;
+}
+.card:hover a{
+    transform: translateY(0);
+}
+.card:hover span{
+    transform: translateX(0);
+}
